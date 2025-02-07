@@ -1,0 +1,1 @@
+import { fetchQuizData, renderQuestion, lockAnswers } from './quiz.js';
