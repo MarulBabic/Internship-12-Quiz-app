@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Kviz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- Sekcija za odabir postavki kviza -->
+    <div id="setup-section">
+      <h1>Trivia Kviz</h1>
+      <form id="quiz-form">
+        <div>
+          <label for="category">Kategorija:</label>
+          <select id="category">
+            <option value="">Any Category</option>
+            <option value="27">Animals</option>
+            <option value="26">Celebrities</option>
+            <option value="25">Arts</option>
+            <option value="24">Politics</option>
+            <option value="23">History</option>
+            <option value="22">Geography</option>
+            <option value="21">Sports</option>
+            <option value="20">Mythology</option>
+          </select>
+        </div>
+        <div>
+          <label for="difficulty">Težina:</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div>
+          <label for="type">Tip igre:</label>
+          <select id="type">
+            <option value="multiple">Multiple Choice</option>
+            <option value="boolean">True / False</option>
+          </select>
+        </div>
+        <button type="submit">Započni Kviz</button>
+      </form>
+    </div>
+    
+    <!-- Sekcija kviza: nakon postavki prikazuje se gumb za start i potom pitanje -->
+    <div id="quiz-section" style="display:none;">
+      <button id="start-quiz-btn">Započni kviz</button>
+      <div id="question-container" style="display:none;">
+        <h2 id="question-text"></h2>
+        <ul id="answers-list"></ul>
+        <p>Vrijeme: <span id="question-timer">20</span> sekundi</p>
+        <button id="next-question-btn" style="display:none;">Sljedeće pitanje</button>
+      </div>
+    </div>
+    
+    <!-- Sekcija rezultata: nakon završetka kviza -->
+    <div id="result-section" style="display:none;">
+      <h2>Kviz završen!</h2>
+      <p id="final-score"></p>
+      <p id="feedback"></p>
+      <button id="restart-btn">Novi kviz</button>
+    </div>
+    
+    <!-- Sekcija povijesti: ispod kviza prikazuju se prethodni rezultati -->
+    <div id="history-section">
+      <h3>Prethodni rezultati:</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  
+  <script type="module" src="app.js"></script>
+</body>
+</html>
